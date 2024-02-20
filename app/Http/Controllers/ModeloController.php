@@ -25,31 +25,6 @@ class ModeloController extends Controller
     {
        $modelo = $this->modelo;
       $modelos = array();
-      
-    
-    
-        if($request->has('atributosMarca')) {
-            $atributos_marca = $request->get('atributosMarca');
-            $modelos = $modelo->with('marca:id,'.$atributos_marca);
-            
-        } else {
-            $modelos = $modelo->with('marca');
-        }
-      
- 
-        if($request->has('filtro')){
-        
-            $filtros = explode(';', $request->filtro);
-            foreach($filtros as $key => $condicao){
-           
-            $c = explode(':', $condicao);
-            
-            $modelos = $modelo->where($c[0], $c[1], $c[2]);
-            
-
-        }
-        
-    }
 
       // atributos foi uma variavel  criado na URL usando o sinal de  "?"
      
@@ -58,7 +33,7 @@ class ModeloController extends Controller
             $atributos_modelo = $request->atributosModelo;
              $modelos = $modelo->selectRaw($atributos_modelo);
          
-      }
+        }
         else{
             $modelos = $modelo->with('marca');
          }
