@@ -1,62 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# app_locadora_carros
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Descrição
+A `app_locadora_carros` é uma aplicação de API desenvolvida em Laravel para gerenciamento de uma locadora de carros. Ela permite aos usuários realizar operações como alugar carros, cadastrar novos carros, verificar disponibilidade, entre outras funcionalidades relacionadas ao gerenciamento de uma locadora de carros.
 
-## About Laravel
+## Requisitos
+- PHP >= 7.3
+- Laravel Framework >= 8.5.9
+- MySQL
+- Postman (para testar as rotas da API)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Instalação
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Clone o repositório do GitHub:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+git clone https://github.com/seu_usuario/app_locadora_carros.git
+```
 
-## Learning Laravel
+2. Navegue até o diretório do projeto:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+cd app_locadora_carros
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Instale as dependências do Composer:
 
-## Laravel Sponsors
+```bash
+composer install
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+4. Copie o arquivo `.env.example` para `.env`:
 
-### Premium Partners
+```bash
+cp .env.example .env
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+5. Configure as variáveis de ambiente no arquivo `.env`, especialmente as relacionadas ao banco de dados.
 
-## Contributing
+6. Gere uma nova chave de aplicativo:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+php artisan key:generate
+```
 
-## Code of Conduct
+7. Execute as migrações do banco de dados para criar as tabelas:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+php artisan migrate
+```
 
-## Security Vulnerabilities
+8. Inicie o servidor embutido do Laravel:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan serve
+```
 
-## License
+## Uso
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Após a instalação e configuração, você pode acessar a API utilizando o Postman ou qualquer outra ferramenta de teste de API. As rotas estão definidas no arquivo `routes/api.php` e os controladores estão localizados em `app/Http/Controllers`.
+
+Certifique-se de revisar a documentação da API para entender todas as rotas disponíveis e os parâmetros necessários para cada requisição.
+
+## Documentação da API
+
+A documentação da API está disponível em `<URL_DO_SEU_SERVIDOR>/api/documentation`, onde `<URL_DO_SEU_SERVIDOR>` é o endereço do servidor onde o aplicativo está sendo executado.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você quiser contribuir com este projeto, siga estas etapas:
+
+1. Faça um fork do projeto
+2. Crie sua branch de feature (`git checkout -b feature/FeatureIncrivel`)
+3. Faça commit de suas alterações (`git commit -am 'Adicione uma nova feature incrível'`)
+4. Faça push para a branch (`git push origin feature/FeatureIncrivel`)
+5. Envie um pull request
+
+## Licença
+
+Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+---
+Este README segue um formato padrão comum para projetos Laravel, adaptado para a aplicação `app_locadora_carros`. Certifique-se de ajustar e expandir conforme necessário para refletir os detalhes específicos do seu projeto.
