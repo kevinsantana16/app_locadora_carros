@@ -1,13 +1,17 @@
 # app_locadora_carros
 
 ## Descrição
-A `app_locadora_carros` é uma aplicação de API desenvolvida em Laravel para gerenciamento de uma locadora de carros. Ela permite aos usuários realizar operações como alugar carros, cadastrar novos carros, verificar disponibilidade, entre outras funcionalidades relacionadas ao gerenciamento de uma locadora de carros.
+A `app_locadora_carros` é uma aplicação de API desenvolvida em Laravel para gerenciamento de uma locadora de carros. Ela permite aos usuários realizar operações como cadrastar novos clientes, alugar carros, cadastrar novos carros, entre outras funcionalidades relacionadas ao gerenciamento de uma locadora de carros.
 
 ## Requisitos
-- PHP >= 7.3
+ ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)  ![Badge](https://img.shields.io/badge/PHP-7.4.6-green) ![Badge](https://img.shields.io/badge/Laravel-Framework-red) ![Badge](https://img.shields.io/badge/MySQL-Database-blue)
+
+- PHP >= 7.3 
 - Laravel Framework >= 8.5.9
 - MySQL
 - Postman (para testar as rotas da API)
+
+
 
 ## Instalação
 
